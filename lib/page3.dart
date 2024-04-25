@@ -1,5 +1,6 @@
 import 'package:assignment2/page2.dart';
 
+
 import 'package:flutter/material.dart';
 import 'package:readmore/readmore.dart';
 
@@ -30,7 +31,7 @@ class _PageThreeState extends State<PageThree> {
             },
             icon: const Icon(Icons.arrow_back_ios_new_outlined,color: Colors.white,)),
         title: const Text(
-          'Supra MK4',
+          'Pininfarina Battista',
           style: TextStyle(
               color: Colors.white, fontWeight: FontWeight.w500, fontSize: 25),
         ),
@@ -184,25 +185,23 @@ class _PageThreeState extends State<PageThree> {
                         trimExpandedText: "show less",
                         colorClickableText: Colors.grey.shade500,),
 
-                      Center(
-                        child: TextButton(
-            
-                            style: TextButton.styleFrom(
-                                padding: const EdgeInsets.symmetric(horizontal: 140,vertical: 7),
-                                foregroundColor: Colors.white,
-                                backgroundColor: Colors.green,
-                                side: const BorderSide(
-                                    width: 2, color: Colors.green, style: BorderStyle.solid),
-                                shape: RoundedRectangleBorder(
-                                    borderRadius: BorderRadius.circular(35)),
-                                textStyle: const TextStyle(
-                                  fontSize: 20,
-                                )
-                            ),
-            
-                            onPressed: () {},
-                            child: const Text('See More')),
-                      ),
+                      TextButton(
+
+                          style: TextButton.styleFrom(
+                              padding: const EdgeInsets.symmetric(horizontal: 100,vertical:  7),
+                              foregroundColor: Colors.white,
+                              backgroundColor: Colors.green,
+                              side: const BorderSide(
+                                  width: 2, color: Colors.green, style: BorderStyle.solid),
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(35)),
+                              textStyle: const TextStyle(
+                                fontSize: 15,
+                              )
+                          ),
+
+                          onPressed: () {},
+                          child: const Text('See More')),
                       const Text(
                         'Suggestions',
                         style: TextStyle(color: Colors.green, fontWeight: FontWeight.w300,fontSize: 15),
