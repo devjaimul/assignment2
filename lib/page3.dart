@@ -1,6 +1,7 @@
 import 'package:assignment2/page2.dart';
 
 import 'package:flutter/material.dart';
+import 'package:readmore/readmore.dart';
 
 
 class PageThree extends StatefulWidget {
@@ -79,10 +80,15 @@ class _PageThreeState extends State<PageThree> {
                   'Pininfarina Battista',
                   style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400,fontSize: 21),
                 ),
-                const Text(
-                  'Automotive nameplates don’t come more legendary than Pininfarina. The Italian studio’s 62-year association with Ferrari, for example, created such icons as the 275 GTB, 365 GTB/4 Daytona and that Tom Selleck Magnum P.I. classic.',
-                  style: TextStyle(color: Colors.black,fontSize: 15),
-                ),
+                ReadMoreText("Automotive nameplates don’t come more legendary than  Pininfarina. The Italian studio’s 62-year association with Ferrari, for example, created such icons as the 275 GTB, 365 GTB/4 Daytona and that Tom Selleck Magnum P.I. classic."
+                  ,
+                  trimLines: 2,
+                  trimMode: TrimMode.Line,
+                  trimCollapsedText: "show more",
+                  moreStyle: TextStyle(color: Colors.grey.shade400),
+                  style: const TextStyle(color: Colors.black),
+                  trimExpandedText: "show less",
+                  colorClickableText: Colors.grey.shade500,),
                 TextButton(
 
                     style: TextButton.styleFrom(
@@ -102,7 +108,7 @@ class _PageThreeState extends State<PageThree> {
                     child: const Text('See More')),
                 const Text(
                   'Suggestions',
-                  style: TextStyle(color: Colors.green, fontWeight: FontWeight.w300,fontSize: 20),
+                  style: TextStyle(color: Colors.green, fontWeight: FontWeight.w300,),
                 ),
                 const Row(
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -118,94 +124,105 @@ class _PageThreeState extends State<PageThree> {
           );
         }
         else {
-          return Padding(
-            padding: const EdgeInsets.all(20),
-            child: Row(
-
-              children: [
-
-              Expanded(
-                child: Container(
-                  height: 250,
-                  width: 250,
-                  decoration: BoxDecoration(
-                    image: const DecorationImage(
-                      image: NetworkImage('https://robbreport.com/wp-content/uploads/2021/12/29.jpg?w=1000'),
-                      fit: BoxFit.cover,
-                    ),
-                    borderRadius: BorderRadius.circular(30),
-                    boxShadow: [
-                      BoxShadow(
-                        color: Colors.grey.withOpacity(0.5),
-                        spreadRadius: 5,
-                        blurRadius: 7,
-                        offset: const Offset(0, 3), // changes position of shadow
+          return SingleChildScrollView(
+            child: Padding(
+              padding: const EdgeInsets.all(20),
+              child: Row(
+            
+                children: [
+            
+                Expanded(
+                  child: Container(
+                    height: 300,
+                    width: 300,
+                    decoration: BoxDecoration(
+                      image: const DecorationImage(
+                        image: NetworkImage('https://robbreport.com/wp-content/uploads/2021/12/29.jpg?w=1000'),
+                        fit: BoxFit.cover,
                       ),
-                    ],
-                  ),
-                  alignment: Alignment.bottomLeft,
-                  child:  const Padding(
-                    padding:  EdgeInsets.all(10),
-                    child:  Text(
-                      'Pininfarina Battista',
-                      style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600,fontSize: 23),
-                    ),
-                  ),
-
-                ),
-              ),
-                const SizedBox(width: 20,),
-              Expanded(
-
-                child: Wrap(
-                 runSpacing: 30,
-                  spacing: 10,
-                  direction: Axis.vertical,
-                  children: [
-                    const Text(
-                      'Pininfarina Battista',
-                      style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400,fontSize: 21),
-                    ),
-                    const Text(
-                      textDirection: TextDirection.rtl,
-                      maxLines: 3,
-                      'Automotive nameplates don’t come more legendary than  Pininfarina. The Italian studio’s 62-year association with Ferrari, for example, created such icons as the 275 GTB, 365 GTB/4 Daytona and that Tom Selleck Magnum P.I. classic.',
-                      style: TextStyle(color: Colors.black,fontSize: 14),
-                    ),
-                    TextButton(
-
-                        style: TextButton.styleFrom(
-                            padding: const EdgeInsets.symmetric(horizontal: 130,vertical: 10),
-                            foregroundColor: Colors.white,
-                            backgroundColor: Colors.green,
-                            side: const BorderSide(
-                                width: 2, color: Colors.green, style: BorderStyle.solid),
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(35)),
-                            textStyle: const TextStyle(
-                              fontSize: 25,
-                            )
+                      borderRadius: BorderRadius.circular(30),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.grey.withOpacity(0.5),
+                          spreadRadius: 5,
+                          blurRadius: 7,
+                          offset: const Offset(0, 3), // changes position of shadow
                         ),
-
-                        onPressed: () {},
-                        child: const Text('See More')),
-                    const Text(
-                      'Suggestions',
-                      style: TextStyle(color: Colors.green, fontWeight: FontWeight.w300,fontSize: 20),
-                    ),
-                    const Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-
-                      children: [
-                        Img( name: "Lotus Evija",pic: "https://robbreport.com/wp-content/uploads/2021/12/26-1.jpg?w=1000",),
-                        SizedBox(width: 20,),
-                        Img( name: "Ferrari Daytona SP3",pic: "https://robbreport.com/wp-content/uploads/2021/12/2-24.jpg?w=1000",),
                       ],
                     ),
-                  ],
+                    alignment: Alignment.bottomLeft,
+                    child:  const Padding(
+                      padding:  EdgeInsets.all(10),
+                      child:  Text(
+                        'Pininfarina Battista',
+                        style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600,fontSize: 23),
+                      ),
+                    ),
+            
+                  ),
                 ),
-              )
-            ],),
+                  const SizedBox(width: 20,),
+                Expanded(
+            
+                  child: Wrap(
+                   runSpacing: 10,
+                    spacing: 10,
+                 //   direction: Axis.vertical,
+                    children: [
+                      const Text(
+                        'Pininfarina Battista',
+                        style: TextStyle(color: Colors.black, fontWeight: FontWeight.w400,fontSize: 21),
+                      ),
+                      ReadMoreText("Automotive nameplates don’t come more legendary than  Pininfarina. The Italian studio’s 62-year association with Ferrari, for example, created such icons as the 275 GTB, 365 GTB/4 Daytona and that Tom Selleck Magnum P.I. classic."
+                        ,
+                        trimLines: 2,
+                        trimMode: TrimMode.Line,
+                        trimCollapsedText: "show more",
+                        moreStyle: TextStyle(color: Colors.grey.shade400),
+                        style: const TextStyle(color: Colors.black),
+                        trimExpandedText: "show less",
+                        colorClickableText: Colors.grey.shade500,),
+
+                      Center(
+                        child: TextButton(
+            
+                            style: TextButton.styleFrom(
+                                padding: const EdgeInsets.symmetric(horizontal: 140,vertical: 7),
+                                foregroundColor: Colors.white,
+                                backgroundColor: Colors.green,
+                                side: const BorderSide(
+                                    width: 2, color: Colors.green, style: BorderStyle.solid),
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(35)),
+                                textStyle: const TextStyle(
+                                  fontSize: 20,
+                                )
+                            ),
+            
+                            onPressed: () {},
+                            child: const Text('See More')),
+                      ),
+                      const Text(
+                        'Suggestions',
+                        style: TextStyle(color: Colors.green, fontWeight: FontWeight.w300,fontSize: 15),
+                      ),
+                      const SizedBox(
+            
+                        
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Img( name: "Lotus Evija",pic: "https://robbreport.com/wp-content/uploads/2021/12/26-1.jpg?w=1000",),
+            
+                            Img( name: "Ferrari Daytona SP3",pic: "https://robbreport.com/wp-content/uploads/2021/12/2-24.jpg?w=1000",),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],),
+            ),
           );
         }
       },),
