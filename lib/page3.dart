@@ -126,12 +126,13 @@ class _PageThreeState extends State<PageThree> {
         else {
           return SingleChildScrollView(
             child: Padding(
-              padding: const EdgeInsets.all(20),
+              padding: const EdgeInsets.only(left: 20,right: 20,top: 5,bottom: 20),
               child: Row(
             
                 children: [
             
                 Expanded(
+
                   child: Container(
                     height: 300,
                     width: 300,

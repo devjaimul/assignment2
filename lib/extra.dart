@@ -105,7 +105,9 @@ class _ExtraPageState extends State<ExtraPage> {
             itemBuilder: (context, index) {
               return InkWell(
                 onTap: () {
-                  Navigator.push(context, MaterialPageRoute(builder: (context) => const PageThree(),));
+
+                   Navigator.push(context, MaterialPageRoute(builder: (context) => const PageThree(),));
+
                 },
                 child: Container(
                   height: 150,
