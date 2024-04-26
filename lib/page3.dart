@@ -88,7 +88,7 @@ class _PageThreeState extends State<PageThree> {
                   trimCollapsedText: "show more",
                   moreStyle: TextStyle(color: Colors.grey.shade400),
                   style: const TextStyle(color: Colors.black),
-                  trimExpandedText: "show less",
+                  trimExpandedText: "show les",
                   colorClickableText: Colors.grey.shade500,),
                 TextButton(
 
