@@ -12,6 +12,26 @@ class HomeScreen extends StatefulWidget {
 class _HomeScreenState extends State<HomeScreen> {
   List<Map> imgLink = [
     {
+      "details":"We loved the outrageous 1,817 hp Venom F5 Coupe from maverick Texas supercar builder John Hennessey and his team at Hennessey Special Vehicles. When it debuted back in 2021, the Venom F5 was fast, furious and designed to shatter the elusive 300 mph barrier. While it has yet to hit that particular bullseye, a recorded max of 271.6 mph certainly shows its potential.",
+      "name":"Hennessey Venom F5",
+      "link":"https://robbreport.com/wp-content/uploads/2021/12/20-2.jpg?w=1000",
+    },
+    {
+      "details":"The mid-mounted 6.5-liter V-12 has been a hulking calling card for Lamborghini’s Murciélago and Aventador flagships, and the Italian brand enters electrification kicking and screaming by retaining the large-displacement mill as the centerpiece of its new hybrid power train. Augmenting the 814 hp petrol burner are three electric motors which elevate the wedge-shaped monster to 1,001 hp, the most output of any plug-in hybrid. Notably, the four-digit figure is achieved without the aid of turbochargers, which can have the buzzkill effect of diminishing the exhaust note.",
+      "name":"Lamborghini Revuelto",
+      "link":"https://robbreport.com/wp-content/uploads/2022/11/13-w-Revuelto.jpg?w=1000",
+    },
+    {
+      "details":"It’s simply the most powerful series-production road car ever built. It packs an astonishing 2,011 hp and 1,256 ft lbs of torque. That’s enough to catapult this hip-high projectile from zero to 62 mph in less than three seconds and whisk it from zero to 186 mph in just 9.1. Top speed? That’s limited to 217mph.",
+      "name":"Lotus Evija",
+      "link":"https://robbreport.com/wp-content/uploads/2021/12/26-1.jpg?w=1000",
+    },
+    {
+      "details":"The Icona series of limited-production models tips a hat to the past by wrapping modern underpinnings with retro-futuristic skins. The third Icona to hail from Modena is the Daytona SP3, which recalls the Ferrari 330 P4s which finished first, second, and third at the 24 Hours of Daytona in 1967.",
+      "name":"Ferrari Daytona SP3",
+      "link":"https://robbreport.com/wp-content/uploads/2021/12/2-24.jpg?w=1000",
+    },
+    {
       "details":
           "Automotive nameplates don’t come more legendary than Pininfarina. The Italian studio’s 62-year association with Ferrari, for example, created such icons as the 275 GTB, 365 GTB/4 Daytona and that Tom Selleck Magnum P.I. classic, the 308 GTS. The Cadillac Atlante? Not so much.",
       'name': "Pininfarina Battista",
